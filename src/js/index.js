@@ -12,8 +12,15 @@ import Home from "./component/home.jsx";
 let seconds = 0;
 
 {
-	setInterval(function () {
+	function myStopFunction() {
+		clearInterval(myInterval);
+	}
+	let myInterval = setInterval(function () {
 		seconds++;
+
+		const reset = () => {
+			seconds = 0;
+		};
 
 		let seconds1000 = Math.floor(seconds / 1000);
 		let rSeconds1000 = seconds % 1000;
@@ -28,8 +35,10 @@ let seconds = 0;
 				decseconds={seconds10}
 				centseconds={seconds100}
 				deccentseconds={seconds1000}
+				reset={reset}
+				stop={myStopFunction}
 			/>,
 			document.querySelector("#app")
 		);
-	}, 1000);
+	}, 1);
 }

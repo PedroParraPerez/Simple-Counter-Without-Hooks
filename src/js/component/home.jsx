@@ -12,6 +12,18 @@ const Home = (props) => {
 				<div className="mx-2">{props.centseconds}</div>
 				<div className="mx-2">{props.decseconds}</div>
 				<div className="mx-2">{props.seconds}</div>
+				<input
+					type="button"
+					value="Reset"
+					onClick={props.reset}
+					placeholder="Reset"
+				/>
+				<input
+					type="button"
+					value="Stop"
+					onClick={props.stop}
+					placeholder="Stop"
+				/>
 			</div>
 		</>
 	);
