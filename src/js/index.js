@@ -14,10 +14,12 @@ let seconds = 0;
 {
 	setInterval(function () {
 		seconds++;
+		let auxseconds;
+		auxseconds = seconds % 10;
+		let decseconds = Math.floor(seconds / 10);
 
-		seconds < 10 ? "" : (seconds = 0);
 		ReactDOM.render(
-			<Home seconds={seconds} />,
+			<Home seconds={auxseconds} decseconds={decseconds} />,
 			document.querySelector("#app")
 		);
 	}, 1000);

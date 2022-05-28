@@ -7,8 +7,10 @@ import propTypes from "prop-types";
 const Home = (props) => {
 	return (
 		<>
-			<div>{props.seconds}</div>
-			<div>{props.minutes}</div>
+			<div className="d-flex">
+				<div className="mx-2">{props.decseconds}</div>
+				<div>{props.seconds}</div>
+			</div>
 		</>
 	);
 };
