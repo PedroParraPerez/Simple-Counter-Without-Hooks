@@ -8,7 +8,6 @@ const Home = (props) => {
 	return (
 		<>
 			<div className="d-flex">
-				<div className="mx-2">{props.milseconds}</div>
 				<div className="mx-2">{props.deccentseconds}</div>
 				<div className="mx-2">{props.centseconds}</div>
 				<div className="mx-2">{props.decseconds}</div>
