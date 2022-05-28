@@ -9,4 +9,16 @@ import "../styles/index.css";
 import Home from "./component/home.jsx";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+let seconds = 0;
+
+{
+	setInterval(function () {
+		seconds++;
+
+		seconds < 10 ? "" : (seconds = 0);
+		ReactDOM.render(
+			<Home seconds={seconds} />,
+			document.querySelector("#app")
+		);
+	}, 1000);
+}
